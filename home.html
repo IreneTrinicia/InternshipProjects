@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #0e023e;
+  
+}
+header {
+    height: 60px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.about {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+.about h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+.slideshow-container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+.mySlides {
+  display: none;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+  border-radius: 50%;
+  user-select: none;
+  background-color: rgba(234, 234, 245, 0.5);
+  text-align: center;
+  line-height: 50px;
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+.text {
+  color: #fefefe;
+  font-size: 24px;
+  padding: 8px 0;
+  position: absolute;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot:hover, .active {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 18px;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="bghome1.jpeg" style="width:100%">
+        <div class="text">
+            <h1>Welcome to My Website</h1>
+            <p>Explore my profile and get to know me better.</p>
+            <div class="slide-button-container">
+                <a class="slide-button" href="about.html" style="color: #fff;">About</a>
+            </div>
+        </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="bghome1.jpeg" style="width:100%">
+        <div class="text">
+            <h1>Discover My Work</h1>
+            <p>Check out the projects I've been working on.</p>
+            <div class="slide-button-container">
+                <a class="slide-button" href="portfolio.html" style="color: #fff;">Portfolio</a>
+            </div>
+        </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="bghome1.jpeg" style="width:100%">
+        <div class="text">
+            <h1>Contact Me</h1>
+            <p>Feel free to get in touch with me. I'd love to hear from you.</p>
+            <div class="slide-button-container">
+                <a class="slide-button" href="contact.html" style="color: #fff;">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="bghome1.jpeg" style="width:100%">
+        <div class="text">
+            <h1>View My Resume</h1>
+            <p>Click below to view and download my resume and learn more about my qualifications.</p>
+            <div class="slide-button-container">
+                <a class="slide-button" href="resume.html " target="_blank" style="color: #fff;">View Resume</a>
+            </div>
+        </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)"><</a>
+    <a class="next" onclick="plusSlides(1)">></a>
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<footer>
+    <p>&copy; 2023 Irene</p>
+</footer>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0e023e;
+        }
+        header {
+            height: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .portfolio {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .portfolio h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .project-card {
+            background-color: #f0f3f5;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            overflow: hidden;
+            position: relative;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .project-image {
+            position: relative;
+        }
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .overlay {
+            background-color: rgba(214, 229, 244, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateY(100%);
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .overlay a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #c2d7ed;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .overlay a:hover {
+            background-color: #c5daf1;
+        }
+        .project-card h2 {
+            font-size: 24px;
+            margin: 10px;
+            color: #333;
+        }
+        .project-card p {
+            font-size: 16px;
+            margin: 10px;
+            color: #666;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="portfolio">
+        <div class="project-card" id="project1">
+            <br>
+            <div class="project-image">
+                <img src="hangman - Copy.jpeg" alt="Project 1">
+                <div class="overlay">
+                    <a href="javascript:void(0);" onclick="openPopup('popup1')">View Details</a>
+                </div>
+            </div>
+            <h2>Project 1</h2>
+            <p>Description :
+                Hangman is a classic word-guessing game implemented in Python.
+                In Hangman, one player thinks of a word and the other player tries to guess it.
+                The guessing player has a limited number of attempts to guess the word.
+                For each incorrect guess, a part of the hangman's body is drawn, and the goal is to guess the word before the hangman is fully drawn.
+                Python provides a simple and fun way to create Hangman games using loops, conditionals, and strings.
+            </p>
+            <br>
+        </div>
+        <div class="project-card">
+            <br>
+            <div class="project-image">
+                <img src="c.jpeg" alt="Project 2">
+                <div class="overlay">
+                    <a href="javascript:void(0);" onclick="openPopup('popup2')">View Details</a>
+                </div>
+            </div>
+            <br>
+            <h2>Project 2</h2>
+            <p>Description : An online personal diary offers a convenient way to record and 
+                manage daily events and tasks. Unlike traditional diaries, it allows easy access and editing of entries.
+                With password protection, it ensures privacy and limits access to authorized users. This digital solution streamlines the 
+                diary-keeping process for efficiency and security.
+                C is a powerful and versatile programming language which is used to create this project.
+            </p>
+            <br>
+        </div>
+        <div class="project-card">
+            <br>
+            <div class="project-image">
+                <img src="wd.png" alt="Project 3">
+                <div class="overlay">
+                    <a href="javascript:void(0);" onclick="openPopup('popup3')">View Details</a>
+                </div>
+            </div>
+            <br>
+            <h2>Project 3</h2>
+            <p>Description : In today's interconnected world, K-pop has become a cultural sensation, uniting people worldwide and leaving
+                a lasting impact. As enthusiasts of K-pop, we deeply appreciate the dedication fans pour into their beloved artists.
+                This website goes beyond being just a platform; it's a virtual haven that encapsulates the spirit of K-pop fandom. 
+                Crafted using HTML, CSS, and JS, it aims to bring fans together and celebrate the vibrant world of K-pop.
+            </p>
+            <br>
+        </div>
+        <div id="popup1" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                <h2>  Brief explanation of the theory and implementation of the project :</h2>
+                <p>
+                    The Hangman game in Python follows a structured gameplay process.
+                     It begins by randomly selecting a word from a predefined list using the random module. 
+                     The game initializes a list to track guessed letters and sets the number of remaining attempts, typically starting at 6.
+The core of the game lies within a loop, where the player's objective is to guess the word correctly within the given attempts. 
+To provide feedback and show progress, the game displays the current state of the word using underscores for unguessed letters and revealing 
+actual letters for those guessed correctly. This is achieved through list comprehensions, making the game visually engaging.
+User interaction plays a crucial role as the player is prompted to input a letter guess. The game ensures input validation, accepting only 
+single alphabetic characters. To enhance gameplay, the program checks if the guessed letter has been chosen before,preventing repetitive guesses.
+Correct guesses are acknowledged by adding the letter to the list of guessed letters. If all letters in the word are guessed correctly,
+ the player emerges victorious. However, wrong guesses are handled by adding the letter to the guessed list and reducing the remaining attempts.
+  The player is informed about the incorrect guess and the dwindling number of attempts.
+The game reaches its conclusion when the player either successfully guesses the word or exhausts all attempts. In the latter case, 
+the chosen word is revealed, resulting in a loss for the player. At the end of the game, the outcome, whether victory or defeat, is
+ displayed along with the chosen word if the player doesn't succeed. This structured gameplay process ensures an engaging and challenging 
+ Hangman experience in Python.
+                </p>
+            </div>
+        </div>
+        <div id="popup2" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                <h2>Brief explanation of the theory and implementation of the project :</h2>
+                <p>
+                    The program starts by presenting a menu to the user, 
+                    offering options to add, view, edit, or delete diary records, change the password, or exit.
+Diary entries are stored in files named by the date (e.g., "yyyy-mm-dd").
+ Each entry contains details like time, meeting person, location, duration, and entry content.
+The program uses a basic file structure to manage these records and a simple password system to restrict access.
+Users must enter a password to access and perform operations on their diary entries.
+Adding a record involves entering date and time, and other relevant details, with input validation to prevent data entry errors.
+Viewing records allows users to either see all entries for a specific date or view records for a specific time of that day.
+Editing enables users to modify the content of an existing diary entry, whether changing time, meeting details, location, duration, or
+ the entire record.
+Deleting records provides options to remove either the entire diary for a specific date or a specific entry based on time.
+The program ensures data integrity by making temporary copies of records during deletion and renaming them afterward.
+Users can change their password by entering the current password and selecting a new one, enhancing the security of their personal diary.
+                </p>
+            </div>
+        </div>
+        <div id="popup3" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup3')">&times;</span>
+                <h2>Brief explanation of the theory and implementation of the project :</h2>
+                <p>
+                    The Kpop Fandom Website project aims to create a comprehensive and engaging platform for Kpop enthusiasts with the following
+                     key objectives:<br>
+Comprehensive Information Hub:Providing accurate and up-to-date information about Kpop artists, groups, albums, and achievements, the 
+website serves as an extensive resource hub for fans to explore artist profiles and discographies.<br>
+Engaging Quizzes:Interactive quizzes are integrated to educate and entertain fans while challenging their Kpop knowledge, fostering 
+healthy competition, and strengthening the sense of community among fans.<br>
+Event Calendar:The platform offers a real-time event calendar to keep fans updated on upcoming Kpop events, releases, and concerts, 
+enhancing anticipation and ensuring they never miss important dates.<br>
+Merchandise Showcase:Catering to fans' desire for Kpop-themed merchandise, the website features a curated selection of items such as 
+photocards and lightsticks, providing a direct link for fans to purchase memorabilia and strengthen their connection with their favorite artists.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Irene</p>
+    </footer>
+    <script>
+        function openPopup(popupId) {
+            document.getElementById(popupId).style.display = "block";
+        }
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = "none";
+        }
+    </script>
+</body>
+</html>
